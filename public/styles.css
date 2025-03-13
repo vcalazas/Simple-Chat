@@ -1,0 +1,94 @@
+/* Custom scrollbar styling */
+#chatContainer::-webkit-scrollbar {
+    width: 6px;
+}
+
+#chatContainer::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+#chatContainer::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+}
+
+#chatContainer::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Message animations */
+.message {
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Message bubbles */
+.message-bubble {
+    max-width: 80%;
+    word-wrap: break-word;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.message-bubble.sent {
+    background-color: #3b82f6;
+    color: white;
+    border-radius: 16px 16px 4px 16px;
+    padding: 8px 16px;
+    margin-left: auto;
+}
+
+.message-bubble.received {
+    background-color: #f3f4f6;
+    color: #1f2937;
+    border-radius: 16px 16px 16px 4px;
+    padding: 8px 16px;
+}
+
+/* System message styling */
+.system-message {
+    text-align: center;
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin: 8px 0;
+    font-style: italic;
+}
+
+/* Connection status indicators */
+#connectionStatus {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+}
+
+#connectionStatus.connected {
+    background-color: #34d399;
+    color: white;
+}
+
+#connectionStatus.disconnected {
+    background-color: #ef4444;
+    color: white;
+}
+
+/* Input focus styles */
+input:focus {
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* Button hover effects */
+button:active {
+    transform: scale(0.98);
+}
